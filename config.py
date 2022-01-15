@@ -77,7 +77,6 @@ class Config:
         " (if passworded: Leave a space after the command and enter the password.) " + \
         f"\nYou can clear your all files with `/{CLEARME_COMMAND[0]}`," + \
         " Your process quee will be cleared. If anything is uploading at now, it will be cleared.🚫 Be careful💨.\n\n" + \
-        " {UNZIP_COMMAND[0]} " + \
         "🍓 Examples:\n\n✅ `/" + UNZIP_COMMAND[0] + "`" + \
         "\n✅ `/" + UNZIP_COMMAND[0] + " (password) `" + \
         "\n\n🖼 Set thumbnail: `/" + SAVE_THUMB_COMMAND[0] + "`" + \
