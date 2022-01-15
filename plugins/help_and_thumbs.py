@@ -55,7 +55,7 @@ async def save_thumb(client, message):
                 await message.reply_text("❌\n\nReply to a photo with this command to save custom thumbnail",
                     reply_to_message_id = message.message_id)
         else:
-            await message.reply_text("❌\n\nReply to a photo with this command to save custom thumbnail\n" + ",
+            await message.reply_text("❌\n\nReply to a photo with this command to save custom thumbnail",
                 reply_to_message_id = message.message_id)
 
 @Client.on_message(filters.command(Config.CLEAR_THUMB_COMMAND))
