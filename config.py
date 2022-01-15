@@ -77,12 +77,12 @@ class Config:
         " (if passworded: Leave a space after the command and enter the password.) " + \
         f"\n🗑You can clear your all files with `/{CLEARME_COMMAND[0]}`," + \
         " Your process quee will be cleared. If anything is uploading at now, it will be cleared.🚫 Be careful💨.\n\n" + \
-        "🗓 Examples:\n\n✅ `/" + UNZIP_COMMAND[0] + "`" + \
-        "\n✅ `/" + UNZIP_COMMAND[0] + " (password) `" + \
+        "🗓 Examples:\n\n    🔘 `/" + UNZIP_COMMAND[0] + "`" + \
+        "\n    🔘 `/" + UNZIP_COMMAND[0] + " (password) `" + \
         "\n\n🖼 Set thumbnail: `/" + SAVE_THUMB_COMMAND[0] + "`" + \
         "\n❎ Clear thumbnail: `/" + CLEAR_THUMB_COMMAND[0] + "`" + \
         "\n🎞 Show thumbnail: `/" + SHOW_THUMB_COMMAND[0] + "`" + \
-        "\n📜🧮 Server stats: `/" + STATS_COMMAND[0] + "`" + \
+        "\n🧮 Server stats: `/" + STATS_COMMAND[0] + "`" + \
         f"\n\n🌿 Supported: `{all_supported_extensions_with_comma}`")
     UPLOAD_SUCCESS = os.environ.get('UPLOAD_SUCCESS',
         "Files uploaded!\nTime: `{}`\n\n🍇 Uploaded: `{}`\n" + \
