@@ -1,5 +1,5 @@
 {
-  "name": "Telegram UnArchiver Bot",
+  "name": "TL UnArchiver Bot",
   "description": "Telegram UnArchiver Bot. Demo @UnArchiveBot",
     "keywords": [
       "telegram",
@@ -9,9 +9,9 @@
       "unrar",
       "un7z"
     ],
-    "repository": "https://github.com/HuzunluArtemis",
-    "success_url": "https://t.me/HuzunluArtemis",
-    "website": "https://t.me/HuzunluArtemis",
+    "repository": "https://github.com/5samagi/UnArchiveBot",
+    "success_url": "",
+    "website": "",
     "env": {
       "ENV": {
         "description": "Setting this to ANYTHING will enable webhooks when in env mode",
