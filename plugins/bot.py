@@ -36,7 +36,7 @@ async def unarchiver(client, message):
             try:
                 filenameformessage = message.reply_to_message.document.file_name
             except:
-                await message.reply_text("Send and read / Gönder ve oku (x345): /" + Config.HELP_COMMANDS[0], reply_to_message_id = message.message_id)
+                await message.reply_text("Send and read (x345): /" + Config.HELP_COMMANDS[0], reply_to_message_id = message.message_id)
                 return
             sizeformessage = message.reply_to_message.document.file_size
             if message.reply_to_message.media and filenameformessage.endswith(tuple(Config.EXTENSIONS)):
@@ -153,7 +153,7 @@ async def unarchiver(client, message):
                         return
                     ##########################
                     except:
-                        await message.reply_text("🇬🇧 Download Failed.\nerror code: x101", reply_to_message_id = message.message_id)
+                        await message.reply_text("Download Failed.\nerror code: x101", reply_to_message_id = message.message_id)
                         ############
                         if Config.ONE_PROCESS_PER_USER:
                             try:
