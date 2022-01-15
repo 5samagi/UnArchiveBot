@@ -79,7 +79,7 @@ class Config:
         " Your process quee will be cleared. If anything is uploading at now, it will be cleared.🚫 Be careful💨.\n\n" + \
         " {UNZIP_COMMAND[0]} " + \
         "🍓 Examples:\n\n✅ `/" + UNZIP_COMMAND[0] + "`" + \
-        "\n✅ `/" + UNZIP_COMMAND[0] + " ZIP or RAR password `" + \
+        "\n✅ `/" + UNZIP_COMMAND[0] + " (password) `" + \
         "\n\n🖼 Set thumbnail: `/" + SAVE_THUMB_COMMAND[0] + "`" + \
         "\n❌ Clear thumbnail: `/" + CLEAR_THUMB_COMMAND[0] + "`" + \
         "\n🌆 Show thumbnail: `/" + SHOW_THUMB_COMMAND[0] + "`" + \
