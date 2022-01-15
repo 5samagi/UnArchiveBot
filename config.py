@@ -73,9 +73,9 @@ class Config:
         "7z apm arj bz2 bzip2 cab chm cpio cramfs deb dmg fat gz gzip hfs iso lzh lzma lzma2 mbr msi mslz nsis ntfs rar"+
         " rpm squashfs tar tar.bz2 tar.gz tar.xz tbz2 tgz udf vhd wim xar z zip").split()]
     all_supported_extensions_with_comma = ", ".join(EXTENSIONS).upper() # dont change config order.
-    START_TEXT_STR = os.environ.get('START_TEXT_STR',"🗃Send archive and reply with `/" + UNZIP_COMMAND[0] + "`" + \
+    START_TEXT_STR = os.environ.get('START_TEXT_STR',"🗃 Send archive and reply with `/" + UNZIP_COMMAND[0] + "`" + \
         " (if passworded: Leave a space after the command and enter the password.) " + \
-        f"\n🗑You can clear your all files with `/{CLEARME_COMMAND[0]}`," + \
+        f"\n\n🗑 You can clear your all files with `/{CLEARME_COMMAND[0]}`," + \
         " Your process quee will be cleared. If anything is uploading at now, it will be cleared.🚫 Be careful💨.\n\n" + \
         "🗓 Examples:\n    🔘 `/" + UNZIP_COMMAND[0] + "`" + \
         "\n    🔘 `/" + UNZIP_COMMAND[0] + " (password) `" + \
