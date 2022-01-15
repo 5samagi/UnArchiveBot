@@ -45,7 +45,7 @@ async def shell(client, message):
                 stats += "\n\n💎 " + Config.CHANNEL_OR_CONTACT
             await message.reply_text(stats, reply_to_message_id = message.message_id)
         except:
-            await message.reply_text("🇬🇧 Maybe your shell message was empty.",
+            await message.reply_text("Maybe your shell message was empty.",
                     reply_to_message_id = message.message_id)
             return
             
