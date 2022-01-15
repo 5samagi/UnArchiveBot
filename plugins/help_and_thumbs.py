@@ -48,18 +48,14 @@ async def save_thumb(client, message):
                 img.resize((320, height))
                 img.save(thumb_image_path, "JPEG")
                 os.remove(downloaded_file_name)
-                await message.reply_text(f"✅\n\n🇬🇧 Custom thumbnail saved.\nThis image will be used in the upload." + \
-                    f" Clear: /{Config.CLEAR_THUMB_COMMAND[0]}"+ \
-                    f"\n\n🇹🇷 Özel küçük resim kaydedildi.\nBu resim, yükleme işlemlerinde kullanılacak." + \
-                    f" Temizle: /{Config.CLEAR_THUMB_COMMAND[0]}",
+                await message.reply_text(f"✅\n\n🇬🇧 Custom thumbnail saved.\nThis image will be used in the upload.",
+                    f" Clear: /{Config.CLEAR_THUMB_COMMAND[0]}",
                     reply_to_message_id = message.message_id)
             except:
-                await message.reply_text("❌\n\n🇬🇧 Reply to a photo with this command to save custom thumbnail\n" + \
-                    "🇹🇷 Özel küçük resmi kaydetmek için bir fotoğrafı bununla yanıtlayın",
+                await message.reply_text("❌\n\n🇬🇧 Reply to a photo with this command to save custom thumbnail",
                     reply_to_message_id = message.message_id)
         else:
-            await message.reply_text("❌\n\n🇬🇧 Reply to a photo with this command to save custom thumbnail\n" + \
-                "🇹🇷 Özel küçük resmi kaydetmek için bir fotoğrafı bununla yanıtlayın",
+            await message.reply_text("❌\n\n🇬🇧 Reply to a photo with this command to save custom thumbnail\n" + ",
                 reply_to_message_id = message.message_id)
 
 @Client.on_message(filters.command(Config.CLEAR_THUMB_COMMAND))
@@ -76,10 +72,10 @@ async def clear_thumb(client, message):
         )
         if os.path.exists(thumb_image_path):
             os.remove(thumb_image_path)
-            await message.reply_text("✅\n\n🇬🇧 Custom thumbnail cleared successfully.\n🇹🇷 Özel küçük resim başarıyla temizlendi.",
+            await message.reply_text("✅\n\n Custom thumbnail cleared successfully.",
                     reply_to_message_id = message.message_id)
         else:
-            await message.reply_text("❌\n\n🇬🇧 Nothing to clear\n🇹🇷 Temizlenecek bir şey yok. Sensin pis",
+            await message.reply_text("❌\n\n Nothing to clear.",
                     reply_to_message_id = message.message_id)
 
 @Client.on_message(filters.command(Config.SHOW_THUMB_COMMAND))
@@ -96,7 +92,7 @@ async def show_thumb(client, message):
         )
         if os.path.exists(thumb_image_path):
             await message.reply_photo(thumb_image_path,
-            caption = "🇬🇧 Here is your curent thumbnail.\n🇹🇷 Bu senin küçük şeyin... resmin",
+            caption = "Here is your curent thumbnail.",
                     reply_to_message_id = message.message_id,
             ttl_seconds = 10
             )
