@@ -89,7 +89,7 @@ class Config:
         "Files uploaded!\nTime: `{}`\n\n🍇 Uploaded: `{}`\n" + \
         "🍎 Size: `{}`\n🔥 [Source]({})\n✅ Success: `{}`\n❌ Unsucces: `{}`")
     CLEAR_STR = os.environ.get('CLEAR_STR',
-        "You\'re clean like a baby now. I deleted all your data")
+        "You\'re clean like a baby now. I deleted all your data.💀")
     JOIN_CHANNEL_STR = os.environ.get('JOIN_CHANNEL_STR',
         "Hi {}\n\n" + \
         "First subscribe my channel from button, then send /start again")
