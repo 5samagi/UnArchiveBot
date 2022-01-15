@@ -75,21 +75,19 @@ class Config:
     all_supported_extensions_with_comma = ", ".join(EXTENSIONS).upper() # dont change config order.
     START_TEXT_STR = os.environ.get('START_TEXT_STR',"Send archive and reply with `/" + UNZIP_COMMAND[0] + "`" + \
         " (if passworded: Leave a space after the command and enter the password.) " + \
-        f"You can clear your all files with `/{CLEARME_COMMAND[0]}`," + \
-        " Your process quee will be cleared. If anything is uploading at now, it will be cleared. Be careful.\n\n" + \
-        "UNZIP_COMMAND[0]" + \
-        "🍓 Samples:\n\n✅ `/" + UNZIP_COMMAND[0] + "`" + \
-        "\n✅ `/" + UNZIP_COMMAND[0] + " Hunhj887ZunLudArt87emiS`" + \
-        "\n✅ `/" + UNZIP_COMMAND[0] + " HEreis8yorupassword-parolaizZBuraya`" + \
-        "\n✅ `/" + UNZIP_COMMAND[0] + " anoTherSampLe-bAskABirorNek`" + \
+        f"\nYou can clear your all files with `/{CLEARME_COMMAND[0]}`," + \
+        " Your process quee will be cleared. If anything is uploading at now, it will be cleared.🚫 Be careful💨.\n\n" + \
+        "{UNZIP_COMMAND[0]}" + \
+        "🍓 Examples:\n\n✅ `/" + UNZIP_COMMAND[0] + "`" + \
+        "\n✅ `/" + UNZIP_COMMAND[0] + " ZIP or RAR password `" + \
         "\n\n🖼 Set thumbnail: `/" + SAVE_THUMB_COMMAND[0] + "`" + \
         "\n❌ Clear thumbnail: `/" + CLEAR_THUMB_COMMAND[0] + "`" + \
         "\n🌆 Show thumbnail: `/" + SHOW_THUMB_COMMAND[0] + "`" + \
         "\n🌿 Server stats: `/" + STATS_COMMAND[0] + "`" + \
         f"\n\n🍒 Supported: `{all_supported_extensions_with_comma}`")
     UPLOAD_SUCCESS = os.environ.get('UPLOAD_SUCCESS',
-        "Files uploaded!\nTime: `{}`\n\n🍇 Yüklenen / Uploaded: `{}`\n" + \
-        "🍎 Size: `{}`\n🔥 [Kaynak / Source]({})\n✅ Başarılı / Success: `{}`\n❌ Başarısız / Unsucces: `{}`")
+        "Files uploaded!\nTime: `{}`\n\n🍇 Uploaded: `{}`\n" + \
+        "🍎 Size: `{}`\n🔥 [Source]({})\n✅ Success: `{}`\n❌ Unsucces: `{}`")
     CLEAR_STR = os.environ.get('CLEAR_STR',
         "You\'re clean like a baby now. I deleted all your data")
     JOIN_CHANNEL_STR = os.environ.get('JOIN_CHANNEL_STR',
