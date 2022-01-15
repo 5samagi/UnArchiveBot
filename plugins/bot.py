@@ -61,11 +61,10 @@ async def unarchiver(client, message):
                 text = None
                 if password is not None:
                     LOGGER.info("command: " + password[0] + " password: " + password[1] + " for user: " + str(message.from_user.id))
-                    text = "🇬🇧 Downloading with password: `" + password[1] + "`\nPlease wait.\n" + \
-                            "🇹🇷 Şu parolayla indiriliyor: `" + password[1] + "`\nLütfen bekle."
+                    text = "Downloading with password: `" + password[1] + "`\nPlease wait.\n" 
                 else:
                     LOGGER.info("no password.")
-                    text = "🇬🇧 Downloading without password. Please wait.\n🇹🇷 Parolasız olarak indiriliyor. Lütfen bekle."
+                    text = "Downloading without password. Please wait."
                 #
                 downloadingmessage = await message.reply_text(
                     text=text,
@@ -99,7 +98,7 @@ async def unarchiver(client, message):
                             )
                         )
                     except UnknownError as e:
-                        await message.reply_text("🇹🇷 İndirme Başarısız / 🇬🇧 Download Failed.\nerror code 148:\n\n" + e.x, reply_to_message_id = message.message_id)
+                        await message.reply_text("Download Failed.\nerror code 148:\n\n" + e.x, reply_to_message_id = message.message_id)
                         ############
                         if Config.ONE_PROCESS_PER_USER:
                             try:
@@ -114,7 +113,7 @@ async def unarchiver(client, message):
                             os.remove(dl_full_file_path)
                         return
                     except:
-                        await message.reply_text("🇹🇷 İndirme Başarısız / 🇬🇧 Download Failed.\nerror code: x100", reply_to_message_id = message.message_id)
+                        await message.reply_text("Download Failed.\nerror code: x100", reply_to_message_id = message.message_id)
                         ############
                         if Config.ONE_PROCESS_PER_USER:
                             try:
@@ -138,7 +137,7 @@ async def unarchiver(client, message):
                         )
                     ##################
                     except UnknownError as e:
-                        await message.reply_text("🇹🇷 İndirme Başarısız / 🇬🇧 Download Failed.\nerror code 148:\n\n" + e.x, reply_to_message_id = message.message_id)
+                        await message.reply_text("Download Failed.\nerror code 148:\n\n" + e.x, reply_to_message_id = message.message_id)
                         ############
                         if Config.ONE_PROCESS_PER_USER:
                             try:
@@ -154,7 +153,7 @@ async def unarchiver(client, message):
                         return
                     ##########################
                     except:
-                        await message.reply_text("🇹🇷 İndirme Başarısız / 🇬🇧 Download Failed.\nerror code: x101", reply_to_message_id = message.message_id)
+                        await message.reply_text("🇬🇧 Download Failed.\nerror code: x101", reply_to_message_id = message.message_id)
                         ############
                         if Config.ONE_PROCESS_PER_USER:
                             try:
@@ -172,7 +171,7 @@ async def unarchiver(client, message):
                 if download_location is None:
                     try:
                         await client.edit_message_text(
-                            text='🇹🇷 İndirme Başarısız / 🇬🇧 Download Failed.\nerror code: x102',
+                            text='Download Failed.\nerror code: x102',
                             chat_id=chat_id,
                             message_id=downloadingmessage.message_id
                         )
@@ -266,8 +265,7 @@ async def unarchiver(client, message):
                     else:
                         LOGGER.warning('Unable to extract archive!') # burda hata verip çıkar.
                         await client.edit_message_text(
-                            text="❌\n\n🇹🇷 Arşivi çıkarırken hata oluştu. Muhtemelen parola yanlış girildi.\n\n" + \
-                                "🇬🇧 An error occurred while extracting the archive. Probably the password was entered incorrectly.",
+                            text="❌\n\nAn error occurred while extracting the archive. Probably the password was entered incorrectly.",
                             chat_id=chat_id,
                             message_id=downloadingmessage.message_id)
                         if deleteiferrors is not None:
@@ -289,7 +287,7 @@ async def unarchiver(client, message):
                     LOGGER.info(f'got path: {path}')
                 except NotSupportedExtractionArchive:
                     LOGGER.info("Not any valid archive.")
-                    await message.reply_text("❌\n\n🇬🇧 Not any valid archive.\n🇹🇷 Geçerli bir arşiv değil.", reply_to_message_id = message.message_id)
+                    await message.reply_text("❌\n\nNot any valid archive.", reply_to_message_id = message.message_id)
                     return
                 ####################################################3
                 start = time.time()
@@ -376,7 +374,7 @@ async def unarchiver(client, message):
                                     )
                                 )
                             except:
-                                await message.reply_text("🇬🇧 Cannot send\n🇹🇷 Gönderilemedi:\n\n" + "`" + finame + "`", reply_to_message_id = downloadingmessage.message_id)
+                                await message.reply_text("Cannot send:\n\n" + "`" + finame + "`", reply_to_message_id = downloadingmessage.message_id)
                                 unsuccesscount += 1
                             time.sleep(Config.SLEEP_TIME_BETWEEN_SEND_FILES) # sleep for speed
                             try:
