@@ -48,14 +48,14 @@ async def save_thumb(client, message):
                 img.resize((320, height))
                 img.save(thumb_image_path, "JPEG")
                 os.remove(downloaded_file_name)
-                await message.reply_text(f"✅\n\n🇬🇧 Custom thumbnail saved.\nThis image will be used in the upload.",
+                await message.reply_text(f"✅\n\nCustom thumbnail saved.\nThis image will be used in the upload.",
                     f" Clear: /{Config.CLEAR_THUMB_COMMAND[0]}",
                     reply_to_message_id = message.message_id)
             except:
-                await message.reply_text("❌\n\n🇬🇧 Reply to a photo with this command to save custom thumbnail",
+                await message.reply_text("❌\n\nReply to a photo with this command to save custom thumbnail",
                     reply_to_message_id = message.message_id)
         else:
-            await message.reply_text("❌\n\n🇬🇧 Reply to a photo with this command to save custom thumbnail\n" + ",
+            await message.reply_text("❌\n\nReply to a photo with this command to save custom thumbnail\n" + ",
                 reply_to_message_id = message.message_id)
 
 @Client.on_message(filters.command(Config.CLEAR_THUMB_COMMAND))
@@ -72,10 +72,10 @@ async def clear_thumb(client, message):
         )
         if os.path.exists(thumb_image_path):
             os.remove(thumb_image_path)
-            await message.reply_text("✅\n\n Custom thumbnail cleared successfully.",
+            await message.reply_text("✅\n\nCustom thumbnail cleared successfully.",
                     reply_to_message_id = message.message_id)
         else:
-            await message.reply_text("❌\n\n Nothing to clear.",
+            await message.reply_text("❌\n\nNothing to clear.",
                     reply_to_message_id = message.message_id)
 
 @Client.on_message(filters.command(Config.SHOW_THUMB_COMMAND))
@@ -98,6 +98,5 @@ async def show_thumb(client, message):
             )
             
         else:
-            await message.reply_text(f"🇬🇧 You have not set a thumbnail. Send /{Config.HELP_COMMANDS[0]} and read.\n" + \
-            f"🇹🇷 Küçük resim ayarlamamışsın ki? /{Config.HELP_COMMANDS[0]} yazıp oku.",
+            await message.reply_text(f"You have not set a thumbnail. Send /{Config.HELP_COMMANDS[0]} and read.",
                     reply_to_message_id = message.message_id)
