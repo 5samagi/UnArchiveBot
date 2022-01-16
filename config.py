@@ -26,15 +26,15 @@ class Config:
     # commands +
     UNZIP_COMMAND = os.environ.get('UNZIP_COMMAND','unzip')
     UNZIP_COMMAND = [UNZIP_COMMAND, UNZIP_COMMAND+BOT_USERNAME] # bu satıra dokunmayın.
-    STATS_COMMAND = os.environ.get('STATS_COMMAND','stats')
+    STATS_COMMAND = os.environ.get('STATS_COMMAND','status')
     STATS_COMMAND = [STATS_COMMAND, STATS_COMMAND+BOT_USERNAME] # bu satıra dokunmayın.
     SHELL_COMMAND = os.environ.get('SHELL_COMMAND','shell')
     SHELL_COMMAND = [SHELL_COMMAND, SHELL_COMMAND+BOT_USERNAME] # bu satıra dokunmayın.
-    CLEARME_COMMAND = os.environ.get('CLEARME_COMMAND', "clearme")
+    CLEARME_COMMAND = os.environ.get('CLEARME_COMMAND', "clear")
     CLEARME_COMMAND = [CLEARME_COMMAND, CLEARME_COMMAND+BOT_USERNAME] # bu satıra dokunmayın.
     SAVE_THUMB_COMMAND = os.environ.get('SAVE_THUMB_COMMAND', "save")
     SAVE_THUMB_COMMAND = [SAVE_THUMB_COMMAND, SAVE_THUMB_COMMAND+BOT_USERNAME] # bu satıra dokunmayın.
-    CLEAR_THUMB_COMMAND = os.environ.get('CLEAR_THUMB_COMMAND', "clear")
+    CLEAR_THUMB_COMMAND = os.environ.get('CLEAR_THUMB_COMMAND', "clearthu")
     CLEAR_THUMB_COMMAND = [CLEAR_THUMB_COMMAND, CLEAR_THUMB_COMMAND+BOT_USERNAME] # bu satıra dokunmayın.
     SHOW_THUMB_COMMAND = os.environ.get('SHOW_THUMB_COMMAND','show')
     SHOW_THUMB_COMMAND = [SHOW_THUMB_COMMAND, SHOW_THUMB_COMMAND+BOT_USERNAME] # bu satıra dokunmayın.
@@ -61,11 +61,11 @@ class Config:
     SLEEP_TIME_BETWEEN_SEND_FILES = int(os.environ.get('SLEEP_TIME_BETWEEN_SEND_FILES', 2)) 
     SHOW_PROGRESS_MIN_SIZE_DOWNLOAD = int(os.environ.get('SHOW_PROGRESS_MIN_SIZE_DOWNLOAD', 12*1024*1024)) # for speedy
     DOWNLOADING_STR = os.environ.get('DOWNLOADING_STR',
-        "**Downloading:**\n\n🎯 Name / Ad: `{}`\n❄️ Size / Boyut: `{}`\n🔑 Password / Parola: {}")
+        "**Downloading:**\n\n🎯 Name: `{}`\n❄️ Size: `{}`\n🔑 Password: {}")
     UPLOADING_STR = os.environ.get('UPLOADING_STR',
-        "**Uploading:**\n\n🎯 Kaynak / Source: `{}`\n" + \
-        "💩 Source Size: `{}`\n🔑 Password / Parola: {}\n\n🦋 Anlık Dosya / File Now: `{}`\n" + \
-        "❄️ Size Now / Anlık Boyut: `{}`\n🥕 File Turn / Dosya Sırası: `{}`")
+        "**Uploading:**\n\n🎯 Source: `{}`\n" + \
+        "💩 Source Size: `{}`\n🔑 Password: {}\n\n🦋 File Now: `{}`\n" + \
+        "❄️ Size Now: `{}`\n🥕 File Turn: `{}`")
     DOWNLOAD_SUCCESS = os.environ.get('DOWNLOAD_SUCCESS',
         "File downloaded.\nTime: `{}`" + \
         "\n\nExtracting please wait.")
