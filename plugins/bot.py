@@ -428,9 +428,9 @@ async def unarchiver(client, message):
                         pass
                 ##############
             else:
-                await message.reply_text("Send and read / Gönder ve oku (x225): /" + Config.HELP_COMMANDS[0], reply_to_message_id = message.message_id)
+                await message.reply_text("Send and read (x225): /" + Config.HELP_COMMANDS[0], reply_to_message_id = message.message_id)
         else:
-            await message.reply_text("Send and read / Gönder ve oku (x230): /" + Config.HELP_COMMANDS[0], reply_to_message_id = message.message_id)
+            await message.reply_text("Send and read (x230): /" + Config.HELP_COMMANDS[0], reply_to_message_id = message.message_id)
     else:
         await message.reply_text(Config.UNAUTHORIZED_TEXT_STR, reply_to_message_id = message.message_id)
 
